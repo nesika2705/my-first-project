@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>find the second largest number</title>
+    </head>     
+    <body>
+        <h2>10th place numbers</h2>
+        <input type ="text" id="search" placeholder="enter position">
+         <button type="button" onclick="findnumbers()">search</button>
+
+          <p id="result"></p>
+        <script>
+            function findnumbers(){
+                let input = document.getElementById("search").value;
+                  let numbers=[8,3,7,1,9,4,0,6,2,5];
+        let position=[input-1];
+        if (position>=0==position<numbers.length){
+            document.getElementById("result").innerHTML ="numbers=" +numbers[position];
+        }
+        else {
+            document.getElementById("result").innerHTML="numbers not fouund";
+        }
+        }
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Calculator</title>
+</head>
+
+<body>
+
+<h2>Age Calculator</h2>
+
+<label>Date of Birth</label>
+<br>
+<input type="date" id="dob">
+
+<br><br>
+
+
+<button onclick="calculateAge()">Calculate</button>
+<p id="result"></p>
+<script>
+
+function calculateAge() {
+
+    // Date of Birth
+    let dob = new Date(document.getElementById("dob").value);
+
+    // Today's date
+    let today = new Date();
+
+    // Get date values
+    let todayDay = today.getDate();
+    let todayMonth = today.getMonth();
+    let todayYear = today.getFullYear();
+
+    let birthDay = dob.getDate();
+    let birthMonth = dob.getMonth();
+    let birthYear = dob.getFullYear();
+
+    // Calculate age
+    let years = todayYear - birthYear;
+    let months = todayMonth - birthMonth;
+    let days = todayDay - birthDay;
+
+    // If days are negative
+    if (days < 0) {
+
+        months = months - 1;
+
+        let lastMonth =
+            new Date(todayYear, todayMonth, 0);
+
+        days = days + lastMonth.getDate();
+    }
+    // If months are negative
+    if (months < 0) {
+        years = years - 1;
+        months = months + 12;
+    }
+    // Total difference in milliseconds
+    let difference = today - dob;
+    // Convert milliseconds to total seconds
+    let totalSeconds =
+        Math.floor(difference / 1000);
+    // Total minutes
+    let totalMinutes =
+        Math.floor(totalSeconds / 60);
+    // Total hours
+    let totalHours =
+        Math.floor(totalMinutes / 60);
+    // Total days
+    let totalDays =
+        Math.floor(totalHours / 24);
+    // Total weeks
+    let weeks =
+        Math.floor(totalDays / 7);
+    // Remaining days
+    let remainingDays =
+        totalDays % 7;
+    // Display result
+    document.getElementById("result").innerHTML =
+        "Age: " +
+        years + " years " +
+        months + " months " +
+        days + " days" +
+        "<br><br>" +
+        weeks + " weeks " +
+        remainingDays + " days" +
+        "<br>or " +
+        totalDays + " days" +
+        "<br>or " +
+        totalHours + " hours" +
+        "<br>or " +
+        totalMinutes + " minutes" +
+        "<br>or " +
+        totalSeconds + " seconds";
+}
+</script>
+</body>
+</html>

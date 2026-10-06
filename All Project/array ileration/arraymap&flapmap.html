@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Map & FlatMap</h2>
+
+<p id="demo"></p>
+
+<script>
+
+const number = [40, 50, 25, 100, 89, 63];
+
+
+// MAP
+const number1 = number.map(function(value, index, array) {
+    return value * 2;
+});
+
+
+// FLATMAP
+const number2 = number.flatMap(function(value, index, array) {
+    return [value, value * 10];
+});
+
+
+document.getElementById("demo").innerHTML =
+    "Map:<br>" + number1 + "<br><br>" +
+    "FlatMap:<br>" + number2;
+  
+    //ERROR
+    document.getElementById("result").innerHTML=number;
+</script>
+
+</body>
+</html>

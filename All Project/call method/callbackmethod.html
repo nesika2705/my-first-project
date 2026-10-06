@@ -1,0 +1,19 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>callback method</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+             function greet(name){
+                document.getElementById("demo").innerHTML=("Hello"+name)
+             }
+             greet("nesika");
+             function user(callback){
+                callback("nesika")
+             }
+             user (greet);
+        </script>
+    </body>
+</html>

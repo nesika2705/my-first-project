@@ -1,0 +1,58 @@
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: blue;
+}
+
+h2, h3 {
+    color: darkgreen;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Box */
+.box {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+/* Flex */
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills div {
+    background-color: #e6f2ff;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+/* Flex */
+.hobbies {
+    display: flex;
+    gap: 10px;
+}
+
+.hobbies div {
+    background-color: #eeeeee;
+    padding: 10px;
+    border: 1px solid gray;
+}

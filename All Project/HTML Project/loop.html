@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Name search</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>SEARCH NAMES</h2>
+        <input type="text" id="search" placeholder="search name">
+        <button type="button" onclick="searchname()">search</button>
+        <p id="result"></p>
+        <script>
+            let Name=[
+                "Alim",
+                "Gani",
+                "Hammed",
+                "Anu"
+            ];
+            function searchname(){
+                let search= document.getElementById("search").value;
+                let result="";
+                for (let i=0;i<Name.length;i++){
+                     if (Name[i]==search){
+                        result="Name found" + Name[i];
+                
+                     }
+                    
+                }
+            if(result==""){
+                result="Name not found";
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+        </script>
+    </body>
+</html>

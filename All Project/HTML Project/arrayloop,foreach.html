@@ -1,0 +1,25 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h2>arrayexample</h2>
+        <p id="result"></p>
+        <script>
+            let number=[10,20,30,40,50];
+            let result="";
+            //for loop
+            for(let i=0;i<number.length;i++){
+                result=result+number[i]+"<br>";
+            }
+            
+            //forEach
+            number.forEach(function(number){
+                result=result+"number:"+number+"<br>";
+            });
+            document.getElementById("result").innerHTML=result;
+        </script>
+    </body>
+
+
+</html>
